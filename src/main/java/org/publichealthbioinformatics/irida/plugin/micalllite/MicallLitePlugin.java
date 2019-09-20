@@ -1,4 +1,4 @@
-package ca.corefacility.bioinformatics.irida.plugins;
+package org.publichealthbioinformatics.irida.plugin.micalllite;
 
 import java.awt.Color;
 import java.util.Optional;
@@ -8,6 +8,9 @@ import org.pf4j.Extension;
 import org.pf4j.Plugin;
 import org.pf4j.PluginWrapper;
 
+import ca.corefacility.bioinformatics.irida.plugins.IridaPlugin;
+import ca.corefacility.bioinformatics.irida.plugins.IridaPluginException;
+import ca.corefacility.bioinformatics.irida.model.sample.Sample;
 import ca.corefacility.bioinformatics.irida.model.workflow.analysis.type.AnalysisType;
 import ca.corefacility.bioinformatics.irida.pipeline.results.updater.AnalysisSampleUpdater;
 import ca.corefacility.bioinformatics.irida.service.sample.MetadataTemplateService;
@@ -18,16 +21,16 @@ import ca.corefacility.bioinformatics.irida.service.workflow.IridaWorkflowsServi
  * An example {@link IridaPlugin} implementation which will extract some
  * information from the sequencing reads.
  */
-public class ExamplePlugin extends Plugin {
+public class MicallLitePlugin extends Plugin {
 
 	/**
 	 * The {@link AnalysisType} used by this plugin. This wraps around a string and
 	 * is used to store the type of the analysis pipeline (which should be unique
 	 * for each pipeline).
 	 */
-	public static final AnalysisType READ_INFO = new AnalysisType("READ_INFO");
+	public static final AnalysisType MICALL_LITE = new AnalysisType("MICALL_LITE");
 
-	public ExamplePlugin(PluginWrapper wrapper) {
+	public MicallLitePlugin(PluginWrapper wrapper) {
 		super(wrapper);
 	}
 
@@ -59,7 +62,7 @@ public class ExamplePlugin extends Plugin {
 		 */
 		@Override
 		public AnalysisType getAnalysisType() {
-			return READ_INFO;
+			return MICALL_LITE;
 		}
 
 		/**
@@ -67,14 +70,14 @@ public class ExamplePlugin extends Plugin {
 		 * <strong>id</strong> entry in the <strong>irida_workflow.xml</strong> file.
 		 * 
 		 * <pre>
-		 * {@code <id>79d90ca8-00ae-441b-b5c7-193c9e85a968</id>}
+		 * {@code <id>afffff92-3ae4-4cd5-87f7-80d20b42d94c</id>}
 		 * </pre>
 		 * 
 		 * @return A {@link UUID} defining the id of this pipeline.
 		 */
 		@Override
 		public UUID getDefaultWorkflowUUID() {
-			return UUID.fromString("79d90ca8-00ae-441b-b5c7-193c9e85a968");
+			return UUID.fromString("afffff92-3ae4-4cd5-87f7-80d20b42d94c");
 		}
 
 		/*******************************************************************************
@@ -123,7 +126,7 @@ public class ExamplePlugin extends Plugin {
 		@Override
 		public Optional<AnalysisSampleUpdater> getUpdater(MetadataTemplateService metadataTemplateService,
 				SampleService sampleService, IridaWorkflowsService iridaWorkflowsService) throws IridaPluginException {
-			return Optional.of(new ExamplePluginUpdater(metadataTemplateService, sampleService, iridaWorkflowsService));
+			return Optional.of(new MicallLitePluginUpdater(metadataTemplateService, sampleService, iridaWorkflowsService));
 		}
 	}
 }

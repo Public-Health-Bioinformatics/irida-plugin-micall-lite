@@ -1,4 +1,4 @@
-package ca.corefacility.bioinformatics.irida.plugins;
+package org.publichealthbioinformatics.irida.plugin.micalllite;
 
 import java.io.BufferedReader;
 import java.io.FileReader;
@@ -32,20 +32,20 @@ import ca.corefacility.bioinformatics.irida.service.workflow.IridaWorkflowsServi
  * <https://github.com/phac-nml/irida/blob/development/src/main/java/ca/corefacility/bioinformatics/irida/pipeline/results/AnalysisSampleUpdater.java>
  * or the README.md file in this project for more details.
  */
-public class ExamplePluginUpdater implements AnalysisSampleUpdater {
+public class MicallLitePluginUpdater implements AnalysisSampleUpdater {
 
 	private final MetadataTemplateService metadataTemplateService;
 	private final SampleService sampleService;
 	private final IridaWorkflowsService iridaWorkflowsService;
 
 	/**
-	 * Builds a new {@link ExamplePluginUpdater} with the given services.
+	 * Builds a new {@link MicallLitePluginUpdater} with the given services.
 	 * 
 	 * @param metadataTemplateService The metadata template service.
 	 * @param sampleService           The sample service.
 	 * @param iridaWorkflowsService   The irida workflows service.
 	 */
-	public ExamplePluginUpdater(MetadataTemplateService metadataTemplateService, SampleService sampleService,
+	public MicallLitePluginUpdater(MetadataTemplateService metadataTemplateService, SampleService sampleService,
 			IridaWorkflowsService iridaWorkflowsService) {
 		this.metadataTemplateService = metadataTemplateService;
 		this.sampleService = sampleService;
@@ -222,6 +222,6 @@ public class ExamplePluginUpdater implements AnalysisSampleUpdater {
 	 */
 	@Override
 	public AnalysisType getAnalysisType() {
-		return ExamplePlugin.READ_INFO;
+		return MicallLitePlugin.MICALL_LITE;
 	}
 }

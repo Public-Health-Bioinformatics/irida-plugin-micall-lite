@@ -1,21 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <iridaWorkflow>
-  <id>79d90ca8-00ae-441b-b5c7-193c9e85a968</id>
-  <name>ReadInfo</name>
+  <id>afffff92-3ae4-4cd5-87f7-80d20b42d94c</id>
+  <name>MiCallLite</name>
   <version>0.1.0</version>
-  <analysisType>READ_INFO</analysisType>
+  <analysisType>MICALL_LITE</analysisType>
   <inputs>
     <sequenceReadsPaired>sequence_reads</sequenceReadsPaired>
     <requiresSingleSample>true</requiresSingleSample>
   </inputs>
   <parameters>
-    <parameter name="Grep1-4-pattern" defaultValue="^@">
-      <toolParameter toolId="Grep1" parameterName="pattern"/>
-    </parameter>
   </parameters>
   <outputs>
-    <output name="hash.txt" fileName="hash.txt"/>
-    <output name="read-count.txt" fileName="read-count.txt"/>
   </outputs>
   <toolRepositories/>
 </iridaWorkflow>

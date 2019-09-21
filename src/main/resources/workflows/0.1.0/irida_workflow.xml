@@ -1,16 +1,31 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <iridaWorkflow>
-  <id>afffff92-3ae4-4cd5-87f7-80d20b42d94c</id>
+  <id>aedd73c0-2f2a-4cb4-8f65-d6420526c119</id>
   <name>MiCallLite</name>
   <version>0.1.0</version>
   <analysisType>MICALL_LITE</analysisType>
   <inputs>
-    <sequenceReadsPaired>sequence_reads</sequenceReadsPaired>
+    <sequenceReadsPaired/>
     <requiresSingleSample>true</requiresSingleSample>
   </inputs>
   <parameters>
+    <parameter name="micall_lite-1-readlen" defaultValue="251">
+      <toolParameter toolId="testtoolshed.g2.bx.psu.edu/repos/dfornika/micall_lite/micall-lite/0.1rc2+galaxy0" parameterName="readlen"/>
+    </parameter>
   </parameters>
   <outputs>
+    <output name="conseq" fileName="conseq.csv"/>
+    <output name="nuc" fileName="nuc.csv"/>
+    <output name="amino" fileName="amino.csv"/>
+    <output name="insert" fileName="insert.csv"/>
+    <output name="align" fileName="align.csv"/>
   </outputs>
-  <toolRepositories/>
+  <toolRepositories>
+    <repository>
+      <name>micall_lite</name>
+      <owner>dfornika</owner>
+      <url>https://testtoolshed.g2.bx.psu.edu</url>
+      <revision>ce0afe2b18d0</revision>
+    </repository>
+  </toolRepositories>
 </iridaWorkflow>

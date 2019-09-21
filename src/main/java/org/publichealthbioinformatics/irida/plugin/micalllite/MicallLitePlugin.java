@@ -70,14 +70,14 @@ public class MicallLitePlugin extends Plugin {
 		 * <strong>id</strong> entry in the <strong>irida_workflow.xml</strong> file.
 		 * 
 		 * <pre>
-		 * {@code <id>afffff92-3ae4-4cd5-87f7-80d20b42d94c</id>}
+		 * {@code <id>aedd73c0-2f2a-4cb4-8f65-d6420526c119</id>}
 		 * </pre>
 		 * 
 		 * @return A {@link UUID} defining the id of this pipeline.
 		 */
 		@Override
 		public UUID getDefaultWorkflowUUID() {
-			return UUID.fromString("afffff92-3ae4-4cd5-87f7-80d20b42d94c");
+			return UUID.fromString("aedd73c0-2f2a-4cb4-8f65-d6420526c119");
 		}
 
 		/*******************************************************************************
@@ -95,7 +95,7 @@ public class MicallLitePlugin extends Plugin {
 		 */
 		@Override
 		public Optional<Color> getBackgroundColor() {
-			return Optional.of(Color.decode("#dd1c77"));
+			return Optional.of(Color.decode("#238c3f"));
 		}
 
 		/**
@@ -106,7 +106,7 @@ public class MicallLitePlugin extends Plugin {
 		 */
 		@Override
 		public Optional<Color> getTextColor() {
-			return Optional.of(Color.BLACK);
+			return Optional.of(Color.WHITE);
 		}
 
 		/**

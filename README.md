@@ -51,15 +51,15 @@ Once complete, you should end up with a file `target/example-plugin-1.0-SNAPSHOT
 
 If you have previously [setup IRIDA][irida-setup] before you may copy this JAR file to `/etc/irida/plugins` and restart IRIDA.  The plugin should now show up in the **Analyses > Pipelines** section of IRIDA.
 
-![example-plugin-pipeline.png][]  
+![plugin-pipeline.png][]  
 
 You should be able to run a pipeline with this plugin and get analysis results.
 
-![example-plugin-results.png][]
+![plugin-results.png][]
 
 And, you should be able to save and view these results in the IRIDA metadata table.
 
-![example-plugin-metadata.png][]
+![plugin-metadata.png][]
 
 # Dependencies
 
@@ -82,7 +82,7 @@ Once you've successfully built your plugin, you can distribute the JAR file to o
 [pom.xml]: pom.xml
 [workflows-dir]: src/main/resources/workflows
 [workflow-structure]: src/main/resources/workflows/0.1.0/irida_workflow_structure.ga
-[example-plugin-java]: src/main/java/ca/corefacility/bioinformatics/irida/plugins/ExamplePlugin.java
+[micalllite-plugin-java]: src/main/java/ca/corefacility/bioinformatics/irida/plugins/MicallLitePlugin.java
 [irida-plugin-java]: https://github.com/phac-nml/irida/tree/development/src/main/java/ca/corefacility/bioinformatics/irida/plugins/IridaPlugin.java
 [irida-updater]: src/main/java/ca/corefacility/bioinformatics/irida/plugins/ExamplePluginUpdater.java
 [irida-setup]: https://irida.corefacility.ca/documentation/administrator/index.html
@@ -90,8 +90,8 @@ Once you've successfully built your plugin, you can distribute the JAR file to o
 [messages]: src/main/resources/workflows/0.1.0/messages_en.properties
 [maven-min-pom]: https://maven.apache.org/guides/introduction/introduction-to-the-pom.html#Minimal_POM
 [pf4j-start]: https://pf4j.org/doc/getting-started.html
-[example-plugin-results.png]: doc/images/example-plugin-results.png
-[example-plugin-pipeline.png]: doc/images/example-plugin-pipeline.png
-[example-plugin-metadata.png]: doc/images/example-plugin-metadata.png
+[plugin-results.png]: doc/images/example-plugin-results.png
+[plugin-pipeline.png]: doc/images/example-plugin-pipeline.png
+[plugin-metadata.png]: doc/images/example-plugin-metadata.png
 [pipeline-parameters.png]: doc/images/pipeline-parameters.png
-[example-plugin-save-results.png]: doc/images/example-plugin-save-results.png
+[plugin-save-results.png]: doc/images/example-plugin-save-results.png

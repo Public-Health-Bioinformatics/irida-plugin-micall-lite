@@ -5,7 +5,7 @@
   <version>0.1.0</version>
   <analysisType>MICALL_LITE</analysisType>
   <inputs>
-    <sequenceReadsPaired/>
+    <sequenceReadsPaired>sequence_reads_paired</sequenceReadsPaired>
     <requiresSingleSample>true</requiresSingleSample>
   </inputs>
   <parameters>

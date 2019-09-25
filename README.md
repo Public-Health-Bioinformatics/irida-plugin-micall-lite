@@ -90,8 +90,8 @@ Once you've successfully built your plugin, you can distribute the JAR file to o
 [messages]: src/main/resources/workflows/0.1.0/messages_en.properties
 [maven-min-pom]: https://maven.apache.org/guides/introduction/introduction-to-the-pom.html#Minimal_POM
 [pf4j-start]: https://pf4j.org/doc/getting-started.html
-[plugin-results.png]: doc/images/example-plugin-results.png
-[plugin-pipeline.png]: doc/images/example-plugin-pipeline.png
+[plugin-results.png]: doc/images/plugin-results.png
+[plugin-pipeline.png]: doc/images/plugin-pipeline.png
 [plugin-metadata.png]: doc/images/example-plugin-metadata.png
 [pipeline-parameters.png]: doc/images/pipeline-parameters.png
 [plugin-save-results.png]: doc/images/example-plugin-save-results.png

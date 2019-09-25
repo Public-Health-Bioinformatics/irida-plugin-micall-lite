@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <iridaWorkflow>
   <id>aedd73c0-2f2a-4cb4-8f65-d6420526c119</id>
-  <name>MiCallLite</name>
+  <name>micall-lite</name>
   <version>0.1.0</version>
   <analysisType>MICALL_LITE</analysisType>
   <inputs>
@@ -12,6 +12,9 @@
     <parameter name="micall_lite-1-readlen" defaultValue="251">
       <toolParameter toolId="testtoolshed.g2.bx.psu.edu/repos/dfornika/micall_lite/micall-lite/0.1rc2+galaxy0" parameterName="readlen"/>
     </parameter>
+    <parameter name="amino2consensus-1-threshold" defaultValue="0.15">
+      <toolParameter toolId="testtoolshed.g2.bx.psu.edu/repos/dfornika/micall_lite/amino2consensus/0.1rc2+galaxy0" parameterName="threshold"/>
+    </parameter>
   </parameters>
   <outputs>
     <output name="conseq" fileName="conseq.csv"/>
@@ -19,13 +22,14 @@
     <output name="amino" fileName="amino.csv"/>
     <output name="insert" fileName="insert.csv"/>
     <output name="align" fileName="align.csv"/>
+    <output name="consensus" fileName="consensus.fasta"/>
   </outputs>
   <toolRepositories>
     <repository>
       <name>micall_lite</name>
       <owner>dfornika</owner>
       <url>https://testtoolshed.g2.bx.psu.edu</url>
-      <revision>ce0afe2b18d0</revision>
+      <revision>b5df889acab3</revision>
     </repository>
   </toolRepositories>
 </iridaWorkflow>

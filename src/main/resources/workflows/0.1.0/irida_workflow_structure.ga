@@ -1,9 +1,9 @@
 {
-    "uuid": "22ce78c6-a003-4b98-b410-2a4da3f93dc3",
+    "uuid": "b79bc2c9-80fe-407d-834a-8e6e71d86066",
     "tags": [],
     "format-version": "0.1",
     "name": "micall-lite",
-    "version": 4,
+    "version": 0,
     "steps": {
         "0": {
             "tool_id": null,
@@ -25,7 +25,7 @@
             "label": "sequence_reads_paired",
             "inputs": [],
             "position": {
-                "top": 204,
+                "top": 223,
                 "left": 218.5
             },
             "annotation": "",
@@ -90,11 +90,11 @@
                     "id": 0
                 }
             },
-            "tool_state": "{\"__page__\": null, \"__rerun_remap_job_id__\": null, \"input_pair\": \"{\\\"__class__\\\": \\\"RuntimeValue\\\"}\", \"readlen\": \"\\\"251\\\"\"}",
+            "tool_state": "{\"__page__\": null, \"__rerun_remap_job_id__\": null, \"input_pair\": \"{\\\"__class__\\\": \\\"ConnectedValue\\\"}\", \"readlen\": \"\\\"251\\\"\"}",
             "id": 1,
             "tool_shed_repository": {
                 "owner": "dfornika",
-                "changeset_revision": "ce0afe2b18d0",
+                "changeset_revision": "61667ff2c8b5",
                 "name": "micall_lite",
                 "tool_shed": "testtoolshed.g2.bx.psu.edu"
             },
@@ -102,18 +102,18 @@
             "errors": null,
             "name": "micall-lite",
             "post_job_actions": {
-                "RenameDatasetActionconseq": {
-                    "output_name": "conseq",
-                    "action_type": "RenameDatasetAction",
-                    "action_arguments": {
-                        "newname": "conseq.csv"
-                    }
-                },
                 "RenameDatasetActionnuc": {
                     "output_name": "nuc",
                     "action_type": "RenameDatasetAction",
                     "action_arguments": {
                         "newname": "nuc.csv"
+                    }
+                },
+                "RenameDatasetActionconseq": {
+                    "output_name": "conseq",
+                    "action_type": "RenameDatasetAction",
+                    "action_arguments": {
+                        "newname": "conseq.csv"
                     }
                 },
                 "RenameDatasetActionamino": {
@@ -139,18 +139,70 @@
                 }
             },
             "label": null,
-            "inputs": [
-                {
-                    "name": "input_pair",
-                    "description": "runtime parameter for tool micall-lite"
-                }
-            ],
+            "inputs": [],
             "position": {
-                "top": 244.5,
+                "top": 263.5,
                 "left": 519.5
             },
             "annotation": "",
             "content_id": "testtoolshed.g2.bx.psu.edu/repos/dfornika/micall_lite/micall-lite/0.1rc2+galaxy0",
+            "type": "tool"
+        },
+        "2": {
+            "tool_id": "testtoolshed.g2.bx.psu.edu/repos/dfornika/micall_lite/amino2consensus/0.1rc2+galaxy0",
+            "tool_version": "0.1rc2+galaxy0",
+            "outputs": [
+                {
+                    "type": "fasta",
+                    "name": "consensus"
+                }
+            ],
+            "workflow_outputs": [
+                {
+                    "output_name": "consensus",
+                    "uuid": "589181e5-3dee-4699-a023-d15c8440fb55",
+                    "label": null
+                }
+            ],
+            "input_connections": {
+                "amino": {
+                    "output_name": "amino",
+                    "id": 1
+                }
+            },
+            "tool_state": "{\"threshold\": \"\\\"0.15\\\"\", \"__page__\": null, \"__rerun_remap_job_id__\": null, \"amino\": \"{\\\"__class__\\\": \\\"RuntimeValue\\\"}\"}",
+            "id": 2,
+            "tool_shed_repository": {
+                "owner": "dfornika",
+                "changeset_revision": "61667ff2c8b5",
+                "name": "micall_lite",
+                "tool_shed": "testtoolshed.g2.bx.psu.edu"
+            },
+            "uuid": "c236eaa1-5fa0-48dd-bab8-dee7ef8c972b",
+            "errors": null,
+            "name": "MiCall Amino to Consensus",
+            "post_job_actions": {
+                "RenameDatasetActionconsensus": {
+                    "output_name": "consensus",
+                    "action_type": "RenameDatasetAction",
+                    "action_arguments": {
+                        "newname": "consensus.fasta"
+                    }
+                }
+            },
+            "label": null,
+            "inputs": [
+                {
+                    "name": "amino",
+                    "description": "runtime parameter for tool MiCall Amino to Consensus"
+                }
+            ],
+            "position": {
+                "top": 273.5,
+                "left": 737.5
+            },
+            "annotation": "",
+            "content_id": "testtoolshed.g2.bx.psu.edu/repos/dfornika/micall_lite/amino2consensus/0.1rc2+galaxy0",
             "type": "tool"
         }
     },

@@ -1,6 +1,6 @@
 # IRIDA MiCall-Lite Pipeline Plugin
 
-This project contains a pipeline implemented as a plugin for the [IRIDA][] bioinformatics analysis system. 
+![galaxy-workflow-diagram][]
 
 # Table of Contents
 
@@ -95,3 +95,4 @@ Once you've successfully built your plugin, you can distribute the JAR file to o
 [plugin-metadata.png]: doc/images/example-plugin-metadata.png
 [pipeline-parameters.png]: doc/images/pipeline-parameters.png
 [plugin-save-results.png]: doc/images/example-plugin-save-results.png
+[galaxy-workflow-diagram]: doc/images/galaxy-workflow-diagram.png

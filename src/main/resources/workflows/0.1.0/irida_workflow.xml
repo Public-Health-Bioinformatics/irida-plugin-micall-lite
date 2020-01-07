@@ -22,10 +22,10 @@
   </outputs>
   <toolRepositories>
     <repository>
-      <name>micall_lite</name>
+      <name>suite_micall_lite</name>
       <owner>public-health-bioinformatics</owner>
       <url>https://toolshed.g2.bx.psu.edu</url>
-      <revision>023064145bea</revision>
+      <revision>a33882bffea1</revision>
     </repository>
   </toolRepositories>
 </iridaWorkflow>

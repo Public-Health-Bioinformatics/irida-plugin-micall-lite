@@ -10,10 +10,7 @@
   </inputs>
   <parameters>
     <parameter name="micall_lite-1-readlen" defaultValue="251">
-      <toolParameter toolId="testtoolshed.g2.bx.psu.edu/repos/dfornika/micall_lite/micall-lite/0.1rc2+galaxy0" parameterName="readlen"/>
-    </parameter>
-    <parameter name="amino2consensus-1-threshold" defaultValue="0.15">
-      <toolParameter toolId="testtoolshed.g2.bx.psu.edu/repos/dfornika/micall_lite/amino2consensus/0.1rc2+galaxy0" parameterName="threshold"/>
+      <toolParameter toolId="toolshed.g2.bx.psu.edu/repos/public-health-bioinformatics/micall_lite/micall_lite/0.1rc2+galaxy0" parameterName="readlen"/>
     </parameter>
   </parameters>
   <outputs>
@@ -22,14 +19,13 @@
     <output name="amino" fileName="amino.csv"/>
     <output name="insert" fileName="insert.csv"/>
     <output name="align" fileName="align.csv"/>
-    <output name="consensus" fileName="consensus.fasta"/>
   </outputs>
   <toolRepositories>
     <repository>
       <name>micall_lite</name>
-      <owner>dfornika</owner>
-      <url>https://testtoolshed.g2.bx.psu.edu</url>
-      <revision>b5df889acab3</revision>
+      <owner>public-health-bioinformatics</owner>
+      <url>https://toolshed.g2.bx.psu.edu</url>
+      <revision>023064145bea</revision>
     </repository>
   </toolRepositories>
 </iridaWorkflow>

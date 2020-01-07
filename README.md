@@ -5,10 +5,34 @@
 # Table of Contents
 
    * [IRIDA MiCall-Lite Pipeline Plugin](#irida-micall-lite-pipeline-plugin)
+   * [Installation](#installation)
+      * [Installing to IRIDA](#installing-to-irida)
+      * [Installing Galaxy Dependencies](#installing-galaxy-dependencies)
+   * [Usage](#usage)
+      * [Monitoring Pipeline Status](#monitoring-pipeline-status)
+      * [Analysis Results](#analysis-results)
+      * [Metadata Table](#metadata-table)
    * [Building/Packaging](#buildingpackaging)
       * [Installing IRIDA to local Maven repository](#installing-irida-to-local-maven-repository)
       * [Building the plugin](#building-the-plugin)
    * [Dependencies](#dependencies)
+
+# Installation
+
+## Installing to IRIDA
+
+Please download the provided `irida-plugin-micall-lite-[version].jar` from the [releases][] page and copy to your `/etc/irida/plugins` directory.  Now you may start IRIDA and you should see the pipeline appear in your list of pipelines.
+
+*Note:* This plugin requires you to be running IRIDA version >= `19.01`. Please see the [IRIDA][] documentation for more details.
+
+## Installing Galaxy Dependencies
+
+In order to use this pipeline, you will also have to install several Galaxy tools within your Galaxy instance. These can be found at:
+
+| Name                               | Version         | Owner                          | Metadata Revision | Galaxy Toolshed Link                                                                                                                                                    |
+|------------------------------------|-----------------|--------------------------------|-------------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| suite_micall_lite                  |                 | `public-health-bioinformatics` | 0 (2020-01-06)    | [suite_micall_lite-0:a33882bffea1](https://toolshed.g2.bx.psu.edu/view/public-health-bioinformatics/suite_micall_lite/a33882bffea1)                                                                              |
+
 
 # Building/Packaging
 
@@ -56,10 +80,6 @@ If you have previously [setup IRIDA][irida-setup] before you may copy this JAR f
 You should be able to run a pipeline with this plugin and get analysis results.
 
 ![plugin-results.png][]
-
-And, you should be able to save and view these results in the IRIDA metadata table.
-
-![plugin-metadata.png][]
 
 # Dependencies
 

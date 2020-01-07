@@ -1,9 +1,9 @@
 {
-    "uuid": "b79bc2c9-80fe-407d-834a-8e6e71d86066",
+    "uuid": "2ef223f7-534b-4574-b149-d02e6cf5f26b",
     "tags": [],
     "format-version": "0.1",
     "name": "micall-lite",
-    "version": 0,
+    "version": 1,
     "steps": {
         "0": {
             "tool_id": null,
@@ -12,28 +12,28 @@
             "workflow_outputs": [
                 {
                     "output_name": "output",
-                    "uuid": "616fad15-c177-44b6-8736-128d2a6489bc",
+                    "uuid": "4d9e1073-60eb-4baf-86fa-167fb355a1b8",
                     "label": null
                 }
             ],
             "input_connections": {},
             "tool_state": "{\"collection_type\": \"list:paired\"}",
             "id": 0,
-            "uuid": "b38a12ee-dbbb-484b-92ec-59967138b773",
+            "uuid": "64a43b8f-e0e9-4b4c-ad8f-660688f651b1",
             "errors": null,
             "name": "Input dataset collection",
             "label": "sequence_reads_paired",
             "inputs": [],
             "position": {
-                "top": 223,
-                "left": 218.5
+                "top": 206.5,
+                "left": 249
             },
             "annotation": "",
             "content_id": null,
             "type": "data_collection_input"
         },
         "1": {
-            "tool_id": "testtoolshed.g2.bx.psu.edu/repos/dfornika/micall_lite/micall-lite/0.1rc2+galaxy0",
+            "tool_id": "toolshed.g2.bx.psu.edu/repos/public-health-bioinformatics/micall_lite/micall_lite/0.1rc2+galaxy0",
             "tool_version": "0.1rc2+galaxy0",
             "outputs": [
                 {
@@ -60,47 +60,47 @@
             "workflow_outputs": [
                 {
                     "output_name": "insert",
-                    "uuid": "d19dcd9b-a95a-4cf9-88e4-6141404fcaf0",
+                    "uuid": "56163932-d3d6-4cf0-a13a-ad3ac31dc882",
                     "label": null
                 },
                 {
                     "output_name": "align",
-                    "uuid": "027015fd-e21a-4f06-a1d4-903400927948",
+                    "uuid": "8093eb30-7928-4b07-a3fd-a1d591893f17",
                     "label": null
                 },
                 {
                     "output_name": "amino",
-                    "uuid": "c3c91080-b6f3-4a5b-8d7c-344eba5e310c",
+                    "uuid": "22ad7caa-f3bd-43b2-b1c4-439b273ed719",
                     "label": null
                 },
                 {
                     "output_name": "nuc",
-                    "uuid": "9b04b5e0-b4a5-455c-a988-ce4bccdadfca",
+                    "uuid": "2bc03d3c-6c36-4d2c-8800-934faa1a6378",
                     "label": null
                 },
                 {
                     "output_name": "conseq",
-                    "uuid": "d3777e93-592c-44b5-8a68-42d3511843a6",
+                    "uuid": "b1d99f5c-224a-48b7-9293-6ee400dd1219",
                     "label": null
                 }
             ],
             "input_connections": {
-                "input_pair": {
+                "fastq_input|pair": {
                     "output_name": "output",
                     "id": 0
                 }
             },
-            "tool_state": "{\"__page__\": null, \"__rerun_remap_job_id__\": null, \"input_pair\": \"{\\\"__class__\\\": \\\"ConnectedValue\\\"}\", \"readlen\": \"\\\"251\\\"\"}",
+            "tool_state": "{\"__page__\": null, \"__rerun_remap_job_id__\": null, \"fastq_input\": \"{\\\"__current_case__\\\": 1, \\\"fastq_input_selector\\\": \\\"paired_collection\\\", \\\"pair\\\": {\\\"__class__\\\": \\\"RuntimeValue\\\"}}\", \"readlen\": \"\\\"251\\\"\"}",
             "id": 1,
             "tool_shed_repository": {
-                "owner": "dfornika",
-                "changeset_revision": "61667ff2c8b5",
+                "owner": "public-health-bioinformatics",
+                "changeset_revision": "023064145bea",
                 "name": "micall_lite",
-                "tool_shed": "testtoolshed.g2.bx.psu.edu"
+                "tool_shed": "toolshed.g2.bx.psu.edu"
             },
-            "uuid": "90cbae6c-3dfc-4add-a2dc-7d33bbd2a87a",
+            "uuid": "c72f6ba4-d77a-455a-b805-25ef0faaa2c4",
             "errors": null,
-            "name": "micall-lite",
+            "name": "micall_lite",
             "post_job_actions": {
                 "RenameDatasetActionnuc": {
                     "output_name": "nuc",
@@ -139,70 +139,18 @@
                 }
             },
             "label": null,
-            "inputs": [],
-            "position": {
-                "top": 263.5,
-                "left": 519.5
-            },
-            "annotation": "",
-            "content_id": "testtoolshed.g2.bx.psu.edu/repos/dfornika/micall_lite/micall-lite/0.1rc2+galaxy0",
-            "type": "tool"
-        },
-        "2": {
-            "tool_id": "testtoolshed.g2.bx.psu.edu/repos/dfornika/micall_lite/amino2consensus/0.1rc2+galaxy0",
-            "tool_version": "0.1rc2+galaxy0",
-            "outputs": [
-                {
-                    "type": "fasta",
-                    "name": "consensus"
-                }
-            ],
-            "workflow_outputs": [
-                {
-                    "output_name": "consensus",
-                    "uuid": "589181e5-3dee-4699-a023-d15c8440fb55",
-                    "label": null
-                }
-            ],
-            "input_connections": {
-                "amino": {
-                    "output_name": "amino",
-                    "id": 1
-                }
-            },
-            "tool_state": "{\"threshold\": \"\\\"0.15\\\"\", \"__page__\": null, \"__rerun_remap_job_id__\": null, \"amino\": \"{\\\"__class__\\\": \\\"RuntimeValue\\\"}\"}",
-            "id": 2,
-            "tool_shed_repository": {
-                "owner": "dfornika",
-                "changeset_revision": "61667ff2c8b5",
-                "name": "micall_lite",
-                "tool_shed": "testtoolshed.g2.bx.psu.edu"
-            },
-            "uuid": "c236eaa1-5fa0-48dd-bab8-dee7ef8c972b",
-            "errors": null,
-            "name": "MiCall Amino to Consensus",
-            "post_job_actions": {
-                "RenameDatasetActionconsensus": {
-                    "output_name": "consensus",
-                    "action_type": "RenameDatasetAction",
-                    "action_arguments": {
-                        "newname": "consensus.fasta"
-                    }
-                }
-            },
-            "label": null,
             "inputs": [
                 {
-                    "name": "amino",
-                    "description": "runtime parameter for tool MiCall Amino to Consensus"
+                    "name": "fastq_input",
+                    "description": "runtime parameter for tool micall_lite"
                 }
             ],
             "position": {
-                "top": 273.5,
-                "left": 737.5
+                "top": 205.5,
+                "left": 569.5
             },
             "annotation": "",
-            "content_id": "testtoolshed.g2.bx.psu.edu/repos/dfornika/micall_lite/amino2consensus/0.1rc2+galaxy0",
+            "content_id": "toolshed.g2.bx.psu.edu/repos/public-health-bioinformatics/micall_lite/micall_lite/0.1rc2+galaxy0",
             "type": "tool"
         }
     },

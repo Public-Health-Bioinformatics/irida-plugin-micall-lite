@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<iridaWorkflow>
+  <id>d9820957-5ffc-4a25-b98b-c1a655ad39f7</id>
+  <name>micall-lite</name>
+  <version>0.2.0</version>
+  <analysisType>MICALL_LITE</analysisType>
+  <inputs>
+    <sequenceReadsPaired>sequence_reads_paired</sequenceReadsPaired>
+    <requiresSingleSample>true</requiresSingleSample>
+  </inputs>
+  <parameters>
+    <parameter name="micall_lite-1-readlen" defaultValue="251">
+      <toolParameter toolId="toolshed.g2.bx.psu.edu/repos/public-health-bioinformatics/micall_lite/micall_lite/0.1rc3+galaxy0" parameterName="readlen"/>
+    </parameter>
+  </parameters>
+  <outputs>
+    <output name="conseq" fileName="conseq.csv"/>
+    <output name="nuc" fileName="nuc.csv"/>
+    <output name="amino" fileName="amino.csv"/>
+    <output name="insert" fileName="insert.csv"/>
+    <output name="align" fileName="align.csv"/>
+  </outputs>
+  <toolRepositories>
+    <repository>
+      <name>suite_micall_lite</name>
+      <owner>public-health-bioinformatics</owner>
+      <url>https://toolshed.g2.bx.psu.edu</url>
+      <revision>e9618b79c799</revision>
+    </repository>
+  </toolRepositories>
+</iridaWorkflow>

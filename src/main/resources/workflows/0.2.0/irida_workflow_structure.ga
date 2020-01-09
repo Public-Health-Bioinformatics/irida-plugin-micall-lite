@@ -1,0 +1,159 @@
+{
+    "uuid": "1552e489-4b45-4dc9-932f-cb31a40befa2",
+    "tags": [],
+    "format-version": "0.1",
+    "name": "micall-lite",
+    "version": 1,
+    "steps": {
+        "0": {
+            "tool_id": null,
+            "tool_version": null,
+            "outputs": [],
+            "workflow_outputs": [
+                {
+                    "output_name": "output",
+                    "uuid": "8ccb8c72-86d4-4c1b-b7ee-3b69cb25640e",
+                    "label": null
+                }
+            ],
+            "input_connections": {},
+            "tool_state": "{\"collection_type\": \"list:paired\", \"name\": \"sequence_reads_paired\"}",
+            "id": 0,
+            "uuid": "f6b1e09a-6758-4e74-9f8f-4b62d81a21c7",
+            "errors": null,
+            "name": "Input dataset collection",
+            "label": null,
+            "inputs": [],
+            "position": {
+                "top": 323.5,
+                "left": 233
+            },
+            "annotation": "",
+            "content_id": null,
+            "type": "data_collection_input"
+        },
+        "1": {
+            "tool_id": "toolshed.g2.bx.psu.edu/repos/public-health-bioinformatics/micall_lite/micall_lite/0.1rc3+galaxy0",
+            "tool_version": "0.1rc3+galaxy0",
+            "outputs": [
+                {
+                    "type": "csv",
+                    "name": "align"
+                },
+                {
+                    "type": "csv",
+                    "name": "amino"
+                },
+                {
+                    "type": "csv",
+                    "name": "conseq"
+                },
+                {
+                    "type": "csv",
+                    "name": "insert"
+                },
+                {
+                    "type": "csv",
+                    "name": "nuc"
+                }
+            ],
+            "workflow_outputs": [
+                {
+                    "output_name": "insert",
+                    "uuid": "180f33c7-e90d-457f-bc38-b4ce5cf62bcf",
+                    "label": null
+                },
+                {
+                    "output_name": "align",
+                    "uuid": "ccf56d54-2265-47fc-b05f-2a418944cc2f",
+                    "label": null
+                },
+                {
+                    "output_name": "amino",
+                    "uuid": "8edeee38-7a59-474a-87fa-9b60cdfe59c2",
+                    "label": null
+                },
+                {
+                    "output_name": "nuc",
+                    "uuid": "9f103353-6fa0-4a96-b62c-f8ce3ae4e8eb",
+                    "label": null
+                },
+                {
+                    "output_name": "conseq",
+                    "uuid": "23ec987d-bbee-4e73-9a36-23bfd2a4cd28",
+                    "label": null
+                }
+            ],
+            "input_connections": {
+                "fastq_input|pair": {
+                    "output_name": "output",
+                    "id": 0
+                }
+            },
+            "tool_state": "{\"__page__\": null, \"__rerun_remap_job_id__\": null, \"fastq_input\": \"{\\\"__current_case__\\\": 1, \\\"fastq_input_selector\\\": \\\"paired_collection\\\", \\\"pair\\\": {\\\"__class__\\\": \\\"RuntimeValue\\\"}}\", \"readlen\": \"\\\"251\\\"\"}",
+            "id": 1,
+            "tool_shed_repository": {
+                "owner": "public-health-bioinformatics",
+                "changeset_revision": "e5390c4b69e9",
+                "name": "micall_lite",
+                "tool_shed": "toolshed.g2.bx.psu.edu"
+            },
+            "uuid": "59e6e04d-12e4-4055-854c-69a11d61e020",
+            "errors": null,
+            "name": "micall_lite",
+            "post_job_actions": {
+                "RenameDatasetActionnuc": {
+                    "output_name": "nuc",
+                    "action_type": "RenameDatasetAction",
+                    "action_arguments": {
+                        "newname": "nuc.csv"
+                    }
+                },
+                "RenameDatasetActionconseq": {
+                    "output_name": "conseq",
+                    "action_type": "RenameDatasetAction",
+                    "action_arguments": {
+                        "newname": "conseq.csv"
+                    }
+                },
+                "RenameDatasetActionamino": {
+                    "output_name": "amino",
+                    "action_type": "RenameDatasetAction",
+                    "action_arguments": {
+                        "newname": "amino.csv"
+                    }
+                },
+                "RenameDatasetActioninsert": {
+                    "output_name": "insert",
+                    "action_type": "RenameDatasetAction",
+                    "action_arguments": {
+                        "newname": "insert.csv"
+                    }
+                },
+                "RenameDatasetActionalign": {
+                    "output_name": "align",
+                    "action_type": "RenameDatasetAction",
+                    "action_arguments": {
+                        "newname": "align.csv"
+                    }
+                }
+            },
+            "label": null,
+            "inputs": [
+                {
+                    "name": "fastq_input",
+                    "description": "runtime parameter for tool micall_lite"
+                }
+            ],
+            "position": {
+                "top": 350.5,
+                "left": 562.5
+            },
+            "annotation": "",
+            "content_id": "toolshed.g2.bx.psu.edu/repos/public-health-bioinformatics/micall_lite/micall_lite/0.1rc3+galaxy0",
+            "type": "tool"
+        }
+    },
+    "annotation": "",
+    "a_galaxy_workflow": "true"
+}

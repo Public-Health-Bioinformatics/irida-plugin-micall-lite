@@ -1,5 +1,5 @@
 {
-    "uuid": "2ef223f7-534b-4574-b149-d02e6cf5f26b",
+    "uuid": "1552e489-4b45-4dc9-932f-cb31a40befa2",
     "tags": [],
     "format-version": "0.1",
     "name": "micall-lite",
@@ -12,29 +12,29 @@
             "workflow_outputs": [
                 {
                     "output_name": "output",
-                    "uuid": "4d9e1073-60eb-4baf-86fa-167fb355a1b8",
+                    "uuid": "8ccb8c72-86d4-4c1b-b7ee-3b69cb25640e",
                     "label": null
                 }
             ],
             "input_connections": {},
-            "tool_state": "{\"collection_type\": \"list:paired\", \"name\": \"sequence_reads_paired\"}",
+            "tool_state": "{\"collection_type\": \"list:paired\"}",
             "id": 0,
-            "uuid": "64a43b8f-e0e9-4b4c-ad8f-660688f651b1",
+            "uuid": "f6b1e09a-6758-4e74-9f8f-4b62d81a21c7",
             "errors": null,
             "name": "Input dataset collection",
-            "label": "sequence_reads_paired",
+            "label": null,
             "inputs": [],
             "position": {
-                "top": 206.5,
-                "left": 249
+                "top": 323.5,
+                "left": 233
             },
             "annotation": "",
             "content_id": null,
             "type": "data_collection_input"
         },
         "1": {
-            "tool_id": "toolshed.g2.bx.psu.edu/repos/public-health-bioinformatics/micall_lite/micall_lite/0.1rc2+galaxy0",
-            "tool_version": "0.1rc2+galaxy0",
+            "tool_id": "toolshed.g2.bx.psu.edu/repos/public-health-bioinformatics/micall_lite/micall_lite/0.1rc3+galaxy0",
+            "tool_version": "0.1rc3+galaxy0",
             "outputs": [
                 {
                     "type": "csv",
@@ -60,27 +60,27 @@
             "workflow_outputs": [
                 {
                     "output_name": "insert",
-                    "uuid": "56163932-d3d6-4cf0-a13a-ad3ac31dc882",
+                    "uuid": "180f33c7-e90d-457f-bc38-b4ce5cf62bcf",
                     "label": null
                 },
                 {
                     "output_name": "align",
-                    "uuid": "8093eb30-7928-4b07-a3fd-a1d591893f17",
+                    "uuid": "ccf56d54-2265-47fc-b05f-2a418944cc2f",
                     "label": null
                 },
                 {
                     "output_name": "amino",
-                    "uuid": "22ad7caa-f3bd-43b2-b1c4-439b273ed719",
+                    "uuid": "8edeee38-7a59-474a-87fa-9b60cdfe59c2",
                     "label": null
                 },
                 {
                     "output_name": "nuc",
-                    "uuid": "2bc03d3c-6c36-4d2c-8800-934faa1a6378",
+                    "uuid": "9f103353-6fa0-4a96-b62c-f8ce3ae4e8eb",
                     "label": null
                 },
                 {
                     "output_name": "conseq",
-                    "uuid": "b1d99f5c-224a-48b7-9293-6ee400dd1219",
+                    "uuid": "23ec987d-bbee-4e73-9a36-23bfd2a4cd28",
                     "label": null
                 }
             ],
@@ -94,11 +94,11 @@
             "id": 1,
             "tool_shed_repository": {
                 "owner": "public-health-bioinformatics",
-                "changeset_revision": "023064145bea",
+                "changeset_revision": "e5390c4b69e9",
                 "name": "micall_lite",
                 "tool_shed": "toolshed.g2.bx.psu.edu"
             },
-            "uuid": "c72f6ba4-d77a-455a-b805-25ef0faaa2c4",
+            "uuid": "59e6e04d-12e4-4055-854c-69a11d61e020",
             "errors": null,
             "name": "micall_lite",
             "post_job_actions": {
@@ -146,11 +146,11 @@
                 }
             ],
             "position": {
-                "top": 205.5,
-                "left": 569.5
+                "top": 350.5,
+                "left": 562.5
             },
             "annotation": "",
-            "content_id": "toolshed.g2.bx.psu.edu/repos/public-health-bioinformatics/micall_lite/micall_lite/0.1rc2+galaxy0",
+            "content_id": "toolshed.g2.bx.psu.edu/repos/public-health-bioinformatics/micall_lite/micall_lite/0.1rc3+galaxy0",
             "type": "tool"
         }
     },

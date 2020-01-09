@@ -25,7 +25,7 @@
       <name>suite_micall_lite</name>
       <owner>public-health-bioinformatics</owner>
       <url>https://toolshed.g2.bx.psu.edu</url>
-      <revision>0470b6670fbc</revision>
+      <revision>e9618b79c799</revision>
     </repository>
   </toolRepositories>
 </iridaWorkflow>

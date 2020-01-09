@@ -31,7 +31,7 @@ In order to use this pipeline, you will also have to install several Galaxy tool
 
 | Name                               | Version         | Owner                          | Metadata Revision | Galaxy Toolshed Link                                                                                                                                                    |
 |------------------------------------|-----------------|--------------------------------|-------------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| suite_micall_lite                  |                 | `public-health-bioinformatics` | 0 (2020-01-06)    | [suite_micall_lite-0:a33882bffea1](https://toolshed.g2.bx.psu.edu/view/public-health-bioinformatics/suite_micall_lite/a33882bffea1)                                                                              |
+| suite_micall_lite                  |                 | `public-health-bioinformatics` | 2 (2020-01-08)    | [suite_micall_lite-2:e9618b79c799](https://toolshed.g2.bx.psu.edu/view/public-health-bioinformatics/suite_micall_lite/e9618b79c799)                                     |
 
 
 # Building/Packaging

@@ -17,7 +17,7 @@
                 }
             ],
             "input_connections": {},
-            "tool_state": "{\"collection_type\": \"list:paired\"}",
+            "tool_state": "{\"collection_type\": \"list:paired\", \"name\": \"sequence_reads_paired\"}",
             "id": 0,
             "uuid": "f6b1e09a-6758-4e74-9f8f-4b62d81a21c7",
             "errors": null,

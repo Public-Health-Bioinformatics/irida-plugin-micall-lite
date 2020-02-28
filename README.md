@@ -1,5 +1,10 @@
 # IRIDA MiCall-Lite Pipeline Plugin
 
+### Genotype viral samples by iterative realignment against reference sequences.
+
+Derived from the [MiCall](https://github.com/cfe-lab/MiCall) pipeline from the BC Centre for Excellence in HIV/AIDS Research,
+and [MiCall-Lite](https://github.com/PoonLab/MiCall-Lite) from [Dr. Art Poon at Western University](https://www.schulich.uwo.ca/pathol/people/bios/faculty/poon_art.html)
+
 ![galaxy-workflow-diagram][]
 
 # Table of Contents

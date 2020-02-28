@@ -1,0 +1,233 @@
+{
+    "uuid": "492b9b46-0141-44da-b1cc-fa9f91a76937",
+    "tags": [],
+    "format-version": "0.1",
+    "name": "micall-lite",
+    "version": 4,
+    "steps": {
+        "0": {
+            "tool_id": null,
+            "tool_version": null,
+            "outputs": [],
+            "workflow_outputs": [
+                {
+                    "output_name": "output",
+                    "uuid": "15cbe391-2182-47ee-9983-d2087a1e9b1a",
+                    "label": null
+                }
+            ],
+            "input_connections": {},
+            "tool_state": "{\"collection_type\": \"list:paired\", \"name\": \"sequence_reads_paired\"}",
+            "id": 0,
+            "uuid": "fa5ddeb4-8658-44bb-8213-ff58b10d0a6f",
+            "errors": null,
+            "name": "Input dataset collection",
+            "label": "sequence_reads_paired",
+            "inputs": [],
+            "position": {
+                "top": 151.5,
+                "left": 151.5
+            },
+            "annotation": "",
+            "content_id": null,
+            "type": "data_collection_input"
+        },
+        "1": {
+            "tool_id": "toolshed.g2.bx.psu.edu/repos/iuc/fastp/fastp/0.19.5+galaxy1",
+            "tool_version": "0.19.5+galaxy1",
+            "outputs": [
+                {
+                    "type": "input",
+                    "name": "output_paired_coll"
+                },
+                {
+                    "type": "json",
+                    "name": "report_json"
+                }
+            ],
+            "workflow_outputs": [
+                {
+                    "output_name": "report_json",
+                    "uuid": "8dc59a8e-9194-4540-a17b-1604229b0863",
+                    "label": null
+                }
+            ],
+            "input_connections": {
+                "single_paired|paired_input": {
+                    "output_name": "output",
+                    "id": 0
+                }
+            },
+            "tool_state": "{\"__page__\": null, \"output_options\": \"{\\\"report_html\\\": \\\"false\\\", \\\"report_json\\\": \\\"true\\\"}\", \"single_paired\": \"{\\\"__current_case__\\\": 2, \\\"adapter_trimming_options\\\": {\\\"adapter_sequence1\\\": \\\"\\\", \\\"adapter_sequence2\\\": \\\"\\\", \\\"disable_adapter_trimming\\\": \\\"false\\\"}, \\\"global_trimming_options\\\": {\\\"trim_front1\\\": \\\"\\\", \\\"trim_front2\\\": \\\"\\\", \\\"trim_tail1\\\": \\\"\\\", \\\"trim_tail2\\\": \\\"\\\"}, \\\"paired_input\\\": {\\\"__class__\\\": \\\"RuntimeValue\\\"}, \\\"single_paired_selector\\\": \\\"paired_collection\\\"}\", \"read_mod_options\": \"{\\\"base_correction_options\\\": {\\\"correction\\\": \\\"false\\\"}, \\\"cutting_by_quality_options\\\": {\\\"cut_by_quality3\\\": \\\"false\\\", \\\"cut_by_quality5\\\": \\\"false\\\", \\\"cut_mean_quality\\\": \\\"\\\", \\\"cut_window_size\\\": \\\"\\\"}, \\\"polyg_tail_trimming\\\": {\\\"__current_case__\\\": 1, \\\"poly_g_min_len\\\": \\\"\\\", \\\"trimming_select\\\": \\\"\\\"}, \\\"polyx_tail_trimming\\\": {\\\"__current_case__\\\": 1, \\\"polyx_trimming_select\\\": \\\"\\\"}, \\\"umi_processing\\\": {\\\"umi\\\": \\\"false\\\", \\\"umi_len\\\": \\\"\\\", \\\"umi_loc\\\": \\\"\\\", \\\"umi_prefix\\\": \\\"\\\"}}\", \"overrepresented_sequence_analysis\": \"{\\\"overrepresentation_analysis\\\": \\\"false\\\", \\\"overrepresentation_sampling\\\": \\\"\\\"}\", \"filter_options\": \"{\\\"length_filtering_options\\\": {\\\"disable_length_filtering\\\": \\\"false\\\", \\\"length_required\\\": \\\"\\\"}, \\\"low_complexity_filter\\\": {\\\"complexity_threshold\\\": \\\"\\\", \\\"enable_low_complexity_filter\\\": \\\"false\\\"}, \\\"quality_filtering_options\\\": {\\\"disable_quality_filtering\\\": \\\"false\\\", \\\"n_base_limit\\\": \\\"\\\", \\\"qualified_quality_phred\\\": \\\"\\\", \\\"unqualified_percent_limit\\\": \\\"\\\"}}\", \"__rerun_remap_job_id__\": null}",
+            "id": 1,
+            "tool_shed_repository": {
+                "owner": "iuc",
+                "changeset_revision": "1d8fe9bc4cb0",
+                "name": "fastp",
+                "tool_shed": "toolshed.g2.bx.psu.edu"
+            },
+            "uuid": "2d7493a7-1760-4cdc-875f-c5c88c1667cd",
+            "errors": null,
+            "name": "fastp",
+            "post_job_actions": {
+                "RenameDatasetActionreport_json": {
+                    "output_name": "report_json",
+                    "action_type": "RenameDatasetAction",
+                    "action_arguments": {
+                        "newname": "fastp_report.json"
+                    }
+                },
+                "HideDatasetActionoutput_paired_coll": {
+                    "output_name": "output_paired_coll",
+                    "action_type": "HideDatasetAction",
+                    "action_arguments": {}
+                }
+            },
+            "label": null,
+            "inputs": [
+                {
+                    "name": "single_paired",
+                    "description": "runtime parameter for tool fastp"
+                }
+            ],
+            "position": {
+                "top": 251.5,
+                "left": 156
+            },
+            "annotation": "",
+            "content_id": "toolshed.g2.bx.psu.edu/repos/iuc/fastp/fastp/0.19.5+galaxy1",
+            "type": "tool"
+        },
+        "2": {
+            "tool_id": "toolshed.g2.bx.psu.edu/repos/public-health-bioinformatics/micall_lite/micall_lite/0.1rc5+galaxy0",
+            "tool_version": "0.1rc5+galaxy0",
+            "outputs": [
+                {
+                    "type": "csv",
+                    "name": "align"
+                },
+                {
+                    "type": "csv",
+                    "name": "amino"
+                },
+                {
+                    "type": "csv",
+                    "name": "conseq"
+                },
+                {
+                    "type": "csv",
+                    "name": "insert"
+                },
+                {
+                    "type": "csv",
+                    "name": "nuc"
+                }
+            ],
+            "workflow_outputs": [
+                {
+                    "output_name": "insert",
+                    "uuid": "f6dc0f67-ca29-4a10-aebc-a58f6ba829d8",
+                    "label": null
+                },
+                {
+                    "output_name": "align",
+                    "uuid": "512f82ff-f493-45f2-9ab7-6690a31c2a40",
+                    "label": null
+                },
+                {
+                    "output_name": "amino",
+                    "uuid": "a461df1f-9450-4334-8053-8c6930c7a9af",
+                    "label": null
+                },
+                {
+                    "output_name": "nuc",
+                    "uuid": "52e999fc-589e-4a9a-a506-c1350341f909",
+                    "label": null
+                },
+                {
+                    "output_name": "conseq",
+                    "uuid": "baa50536-891b-49c7-a7c0-89718684985a",
+                    "label": null
+                }
+            ],
+            "input_connections": {
+                "fastq_input|pair": {
+                    "output_name": "output_paired_coll",
+                    "id": 1
+                }
+            },
+            "tool_state": "{\"projects_file_source\": \"{\\\"__current_case__\\\": 1, \\\"projects_file\\\": {\\\"__class__\\\": \\\"RuntimeValue\\\"}, \\\"projects_file_source_selector\\\": \\\"tool_data_table\\\"}\", \"__rerun_remap_job_id__\": null, \"fastq_input\": \"{\\\"__current_case__\\\": 1, \\\"fastq_input_selector\\\": \\\"paired_collection\\\", \\\"pair\\\": {\\\"__class__\\\": \\\"RuntimeValue\\\"}}\", \"readlen\": \"{\\\"__class__\\\": \\\"RuntimeValue\\\"}\", \"__page__\": null}",
+            "id": 2,
+            "tool_shed_repository": {
+                "owner": "public-health-bioinformatics",
+                "changeset_revision": "27d61a7f82f1",
+                "name": "micall_lite",
+                "tool_shed": "toolshed.g2.bx.psu.edu"
+            },
+            "uuid": "e5c970ca-10a7-460e-b1a1-30d280e8db78",
+            "errors": null,
+            "name": "micall_lite",
+            "post_job_actions": {
+                "RenameDatasetActionnuc": {
+                    "output_name": "nuc",
+                    "action_type": "RenameDatasetAction",
+                    "action_arguments": {
+                        "newname": "nuc.csv"
+                    }
+                },
+                "RenameDatasetActionconseq": {
+                    "output_name": "conseq",
+                    "action_type": "RenameDatasetAction",
+                    "action_arguments": {
+                        "newname": "conseq.csv"
+                    }
+                },
+                "RenameDatasetActionamino": {
+                    "output_name": "amino",
+                    "action_type": "RenameDatasetAction",
+                    "action_arguments": {
+                        "newname": "amino.csv"
+                    }
+                },
+                "RenameDatasetActioninsert": {
+                    "output_name": "insert",
+                    "action_type": "RenameDatasetAction",
+                    "action_arguments": {
+                        "newname": "insert.csv"
+                    }
+                },
+                "RenameDatasetActionalign": {
+                    "output_name": "align",
+                    "action_type": "RenameDatasetAction",
+                    "action_arguments": {
+                        "newname": "align.csv"
+                    }
+                }
+            },
+            "label": null,
+            "inputs": [
+                {
+                    "name": "projects_file_source",
+                    "description": "runtime parameter for tool micall_lite"
+                },
+                {
+                    "name": "fastq_input",
+                    "description": "runtime parameter for tool micall_lite"
+                },
+                {
+                    "name": "readlen",
+                    "description": "runtime parameter for tool micall_lite"
+                }
+            ],
+            "position": {
+                "top": 258.5,
+                "left": 478
+            },
+            "annotation": "",
+            "content_id": "toolshed.g2.bx.psu.edu/repos/public-health-bioinformatics/micall_lite/micall_lite/0.1rc5+galaxy0",
+            "type": "tool"
+        }
+    },
+    "annotation": "",
+    "a_galaxy_workflow": "true"
+}

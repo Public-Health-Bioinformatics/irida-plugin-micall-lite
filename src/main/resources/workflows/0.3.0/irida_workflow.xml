@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<iridaWorkflow>
+  <id>806dbfb3-afab-41a8-bc69-9b39cb7b2c14</id>
+  <name>micall-lite</name>
+  <version>0.3.0</version>
+  <analysisType>MICALL_LITE</analysisType>
+  <inputs>
+    <sequenceReadsPaired>sequence_reads_paired</sequenceReadsPaired>
+    <requiresSingleSample>true</requiresSingleSample>
+  </inputs>
+  <parameters>
+    <parameter name="micall_lite-2-projects_file" required="true">
+      <dynamicSource>
+        <galaxyToolDataTable name="micall_lite_projects_files" displayColumn="name" parameterColumn="value" />
+      </dynamicSource>
+      <toolParameter toolId="toolshed.g2.bx.psu.edu/repos/public-health-bioinformatics/micall_lite/micall_lite/0.1rc5+galaxy0" parameterName="projects_file_source.projects_file"/>
+    </parameter>
+    <parameter name="micall_lite-2-readlen" defaultValue="251">
+      <toolParameter toolId="toolshed.g2.bx.psu.edu/repos/public-health-bioinformatics/micall_lite/micall_lite/0.1rc5+galaxy0" parameterName="readlen"/>
+    </parameter>
+  </parameters>
+  <outputs>
+    <output name="conseq" fileName="conseq.csv"/>
+    <output name="nuc" fileName="nuc.csv"/>
+    <output name="amino" fileName="amino.csv"/>
+    <output name="insert" fileName="insert.csv"/>
+    <output name="align" fileName="align.csv"/>
+    <output name="fastp_report" fileName="fastp_report.json"/>
+  </outputs>
+  <toolRepositories>
+    <repository>
+      <name>micall_lite</name>
+      <owner>public-health-bioinformatics</owner>
+      <url>https://toolshed.g2.bx.psu.edu</url>
+      <revision>27d61a7f82f1</revision>
+    </repository>
+    <repository>
+      <name>fastp</name>
+      <owner>iuc</owner>
+      <url>https://toolshed.g2.bx.psu.edu</url>
+      <revision>1d8fe9bc4cb0</revision>
+    </repository>
+  </toolRepositories>
+</iridaWorkflow>

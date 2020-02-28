@@ -29,10 +29,83 @@ Please download the provided `irida-plugin-micall-lite-[version].jar` from the [
 
 In order to use this pipeline, you will also have to install several Galaxy tools within your Galaxy instance. These can be found at:
 
-| Name                               | Version         | Owner                          | Metadata Revision | Galaxy Toolshed Link                                                                                                                                                    |
-|------------------------------------|-----------------|--------------------------------|-------------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| suite_micall_lite                  |                 | `public-health-bioinformatics` | 2 (2020-01-08)    | [suite_micall_lite-2:e9618b79c799](https://toolshed.g2.bx.psu.edu/view/public-health-bioinformatics/suite_micall_lite/e9618b79c799)                                     |
+| Name                 | Version           | Owner                          | Metadata Revision | Galaxy Toolshed Link                                                                                                    |
+|----------------------|-------------------|--------------------------------|-------------------|-------------------------------------------------------------------------------------------------------------------------|
+| micall_lite          |  `0.1rc5+galaxy0` | `public-health-bioinformatics` | 4 (2020-02-28)    | [micall_lite-4:27d61a7f82f1](https://toolshed.g2.bx.psu.edu/view/public-health-bioinformatics/micall_lite/27d61a7f82f1) |
+| fastp                |  `0.19.5+galaxy1` |                          `iuc` | 8 (2019-05-28)    | [fastp-8:1d8fe9bc4cb0](https://toolshed.g2.bx.psu.edu/view/iuc/fastp/1d8fe9bc4cb0)                                      |
 
+
+## Setting up your MiCall-Lite `projects.json` File
+
+MiCall-Lite requires a `projects.json` file that defines specific genomic regions and sequences to align against.
+
+An example `projects.json` file is available on the [MiCall-Lite GitHub Repo](https://github.com/PoonLab/MiCall-Lite/blob/master/micall/projects.json)
+
+The file is structured as follows:
+```
+{
+  "projects": {
+    "ERCC": {
+      "max_variants": 0,
+      "description": "External RNA Controls Consortium reference; https://doi.org/10.1186/1471-2164-6-150",
+      "regions": [
+        {
+          "coordinate_region": "ERCC-00002",
+          "seed_region_names": [
+            "ERCC-00002-seed"
+          ]
+        },
+        ...
+        "HCV": {
+              "max_variants": 0,
+              "description": "Hepatitis C virus, coding regions",
+              "regions": [
+                {
+                  "coordinate_region": "HCV1A-H77-Core",
+                  "seed_region_names": [
+                    "HCV-1a",
+                    "HCV-1c",
+                    "HCV-1e",
+                    "HCV-1g"
+                  ]
+                },
+        ...
+        "HIV": {
+              "max_variants": 0,
+              "description": "Human immunodeficiency virus type 1, coding regions",
+              "regions": [
+                {
+                  "coordinate_region": "GP41",
+                  "seed_region_names": [
+                    "HIV1B-env-seed"
+                  ]
+                },
+        ...
+        },
+    "regions": {
+        "ERCC-00002": {
+          "is_nucleotide": false,
+          "reference": [
+            "PDYFHFRPSCSQYTGVGIQTVG*SWFY*ARLAYEHYGQ*FLEE*VPRKKRTFGFQSCTVALNSDR",
+            "SQKNEI*AYGRSEWHKACSVSWHKIPCLDVIHVSGNCLVMRLFPGVRAAGICCKEGR*VRPTSLP",
+            "PFSLLGPVSQFSEVPPYAEDHLKRASSLFVVRRLLVWRRIARIINCAVRAASEEVCCGFALTAGR",
+            "RHNDSDSVSGDLHMFAAYFRWALASFRSQNRAIIPVLIYWTRNVGPSVVRIPRRLRAVYTLLSND",
+            "CTTCDHLIQNYQSSSPRSGLVRTAAFARVCGL*LFSLDGLAHIWLTRRIVAIHRFARQSVLVGVR",
+            "PRDSWLNGRTTRQPVLAFYP*KKKKKKK"
+          ],
+          "seed_group": null
+        },
+        ...
+    }
+}
+```
+
+## Preparing the 'micall_lite_projects_files' Tool Data Table in Galaxy
+
+This workflow requires that the MiCall-Lite `projects.json` files described above are made available via a 
+[Galaxy Tool Data Table](https://galaxyproject.org/admin/tools/data-tables/) called `micall_lite_projects_files`.
+We recommend that the galaxy administrator use the [`data_manager_manual`](https://github.com/galaxyproject/tools-iuc/tree/master/data_managers/data_manager_manual) 
+tool to manage that data table.
 
 # Building/Packaging
 
@@ -71,7 +144,7 @@ cd irida-plugin-example
 mvn clean package
 ```
 
-Once complete, you should end up with a file `target/example-plugin-1.0-SNAPSHOT.jar` which can be installed as a plugin to IRIDA.
+Once complete, you should end up with a file `target/irida-plugin-micall-lite-<version>.jar` which can be installed as a plugin to IRIDA.
 
 If you have previously [setup IRIDA][irida-setup] before you may copy this JAR file to `/etc/irida/plugins` and restart IRIDA.  The plugin should now show up in the **Analyses > Pipelines** section of IRIDA.
 

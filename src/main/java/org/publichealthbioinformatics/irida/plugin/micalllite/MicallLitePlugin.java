@@ -70,14 +70,14 @@ public class MicallLitePlugin extends Plugin {
 		 * <strong>id</strong> entry in the <strong>irida_workflow.xml</strong> file.
 		 * 
 		 * <pre>
-		 * {@code <id>d9820957-5ffc-4a25-b98b-c1a655ad39f7</id>}
+		 * {@code <id>806dbfb3-afab-41a8-bc69-9b39cb7b2c14</id>}
 		 * </pre>
 		 * 
 		 * @return A {@link UUID} defining the id of this pipeline.
 		 */
 		@Override
 		public UUID getDefaultWorkflowUUID() {
-			return UUID.fromString("d9820957-5ffc-4a25-b98b-c1a655ad39f7");
+			return UUID.fromString("806dbfb3-afab-41a8-bc69-9b39cb7b2c14");
 		}
 
 		/*******************************************************************************
